@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
 
   get 'signup', to: 'users#new'
-  resources :users, only: [:index, :show, :create, :edit]do
+  resources :users, only: [:index, :show, :create, :edit, :update]do
       member do
       get :followings
       get :followers

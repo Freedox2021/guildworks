@@ -10,8 +10,6 @@
     </div>
     <%= render 'relationships/follow_button', user: @user %>
     
-    
-    <%= link_to 'プロフィールを編集する', edit_user_path(@user) %> 
   </aside>
   <div class="col-sm-8">
     <ul class="nav nav-tabs nav-justified mb-3">
@@ -23,3 +21,32 @@
     <%= render 'posts/posts', posts: @posts %>
   </div>
 </div>
+
+
+   <div class="col-sm-4">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th>
+              <span>メールアドレス</span>
+            </th>
+            <td><%= current_user.email %></td>
+          </tr>
+          <tr>
+            <th>
+              <span>ニックネーム</span>
+            </th>
+            <td><%= current_user.name %></td>
+          </tr>
+          <tr>
+            <th>
+              <span>専門</span>
+            </th>
+            <td><%= current_user.name %></td>
+             
+
+        </tbody>
+      </table>
+      <%= link_to 'プロフィールを編集する', edit_user_path(@user), class: 'btn btn-success' %> 
+    </div>
+  </div>

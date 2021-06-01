@@ -11,10 +11,14 @@
           <p class="mb-0"><%= post.content %></p>
         </div>
         <div>
-   <%= render "favorites/favorite_button", post: post %>
+           <div class="btn-toolbar">
+　　　　　　<div class="btn-group">
+           <%= render "favorites/favorite_button", post: post %>
+       
           <% if current_user == post.user %>
             <%= link_to "Delete", post, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
-       
+     　　　 </div>
+　　　　　</div>
           <% end %>
         </div>
       </div>
